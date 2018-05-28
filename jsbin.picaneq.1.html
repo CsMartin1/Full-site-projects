@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2018 by CsMartin1 (http://jsbin.com/picaneq/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html lang="en">
+<head>
+  <meta name="description" content="Wedding site">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+  <link href="https://fonts.googleapis.com/css?family=Great+Vibes&#124;Libre+Baskerville&#124;Muli" rel="stylesheet">
+  <title>Zoe &amp; Alex</title>
+<style id="jsbin-css">
+/*-- PAGE STYLES --*/
+
+* {
+  box-sizing: border-box;
+}
+
+
+main {
+  background-image: url('https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-background.png');
+}
+
+.grey {
+  color: #444349;
+}
+
+.gold {
+  color: #d2ba87;
+  background-color: hsla(100,0%,0%,.6);
+}
+
+/*-- FONT STYLES --*/
+
+h1,h2 {
+  font-family: "Great Vibes";
+  font-size: 3rem;
+  text-align: center;
+}
+
+h3, .contact p, .gifts p, .tagline, .date {
+  font-family: "Libre Baskerville";
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 1.6rem;
+}
+
+p, small, ul {
+  font-family: Muli;
+  font-size: 1.1rem;
+}
+
+a {
+  color: #bd806e;
+  text-decoration: none;
+}
+
+a:hover {
+  transition: .15s ease-in-out;
+  color: #eda087;
+}
+
+/*-- HEADER STYLES --*/
+
+.cover {
+  background: url('https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-cover.jpg') no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.wrapper {
+  display: table-cell;
+  width: 100vw;
+  height: 25vh;
+  margin: 0 auto;
+  vertical-align: middle;
+  background-color: hsla(100,0%,0%,.6);
+}
+
+.headline {
+  font-size: 3.5rem;
+  padding: 1rem;
+}
+
+.tagline, .date {
+  color: #fff;
+  padding: 1rem;
+  font-size: 1.4rem;
+  letter-spacing: 0.15rem;
+}
+
+header hr {
+  width: 12rem;
+}
+
+@media (min-width: 768px) {
+  .cover {
+    position: relative;
+  }
+	.wrapper {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 55%;
+    height: auto;
+	}
+  .headline {
+    font-size: 7.5rem;
+  }
+  .tagline {
+    text-transform: uppercase;
+  }
+}
+
+/*-- MAIN STYLES --*/
+
+section {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.location {
+  text-align: center;
+}
+
+img {
+  width: 7.5rem;
+  height: auto;
+}
+
+.location div p {
+  line-height: 1.6;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.location hr {
+  width: 25%;
+  color: #000;
+  background-color: #000;
+  height: 0.18rem;
+}
+
+.program p, .program ul {
+  margin-left: 1rem;
+  margin-top: 2rem;
+}
+
+li {
+  line-height: 1.5;
+}
+
+.program p {
+  font-style: italic;
+}
+
+.gifts {
+  text-align: center;
+}
+
+.gifts p {
+  margin: 2rem;
+}
+
+.questions-answers h3 {
+  text-align: center;
+  font-weight: normal;
+}
+
+.questions-answers {
+  line-height: 1.5;
+}
+
+.question {
+  margin: 1rem;
+  font-weight: bold;
+}
+
+.answer {
+  margin: 1rem;
+}
+
+.questions-answers hr {
+  display: block;
+  border: 0;
+  border-top: 0.2rem solid #d2ba87;
+  width: 50%;
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact p {
+  margin: 2rem;
+}
+
+@media (min-width: 768px) {
+  .questions-answers hr, .location hr {
+    display: none;
+  }
+
+  .location div {
+    display: inline-block;
+    width: 33.33%;
+  }
+
+  .program ul, .program p {
+    margin-left: 33.33%;
+  }
+
+  .qa div {
+    display: inline-block;
+    width: 30%;
+    text-align: left;
+    padding: 2rem;
+    vertical-align: top
+  }
+
+  .qa h3, .question, .answer {
+    text-align: left;
+    margin: 0;
+    margin-bottom: 1rem;
+    padding: 0;
+    margin-left: .5rem;
+  }
+
+  .qa {
+    text-align: center;
+    margin-top: .5rem;
+  }
+}
+
+/*-- FOOTER STYLES --*/
+
+footer {
+  text-align: center;
+  background-color: #606060;
+}
+
+small {
+  display: block;
+  height: 100%;
+  font-size: 0.9rem;
+  color: #fff;
+  padding: 1.4rem;
+}
+
+footer img {
+  width: 0.9rem;
+  height: auto;
+}
+</style>
+</head>
+<body>
+  <header class="cover gold">
+    <div class="wrapper">
+      <h2 class="tagline">We're getting married!</h2>
+      <hr>
+      <h1 class="headline">Zoe &amp; Alex</h1>
+      <h2 class="date">August 1, 2018</h2>
+    </div>
+  </header>
+  <main>
+    <section class="location grey">
+      <h2 class="section-headline">Locations</h2>
+      <div>
+        <h3>Ceremony</h3>
+        <img src="https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-ceremony.png" alt="rings">
+        <p>St. Nicholas Church<br/> 2 Trinity Square, Budapest </p>
+        <hr>
+      </div><!--
+      --><div>
+        <h3>Photos</h3>
+        <img src="https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-photoshoot.png" alt="camera">
+        <p>Liberty Bastion<br/> 23 Wisdom Road, Budapest</p>
+        <hr>
+      </div><!--
+      --><div>
+        <h3>Party</h3>
+        <img src="https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-party.png" alt="cake">
+        <p>Heaven Lounge<br/> 14 Fairy Street, Budapest</p>
+        <hr>
+      </div>
+    </section>
+    <section class="program gold">
+      <h2 class="section-headline">Program</h2>
+      <p>"It's going to be somehow, that's for sure."</p>
+      <ul>
+        <li>13:45 – Wedding ceremony</li>
+        <li>14:30 – Photos</li>
+        <li>16:00 – Cocktails</li>
+        <li>18:00 – Dinner</li>
+        <li>22:00 – Cake</li>
+        <li>... - 4:00 – Dance until dawn</li>
+      </ul>
+    </section>
+    <section class="gifts grey">
+      <h2 class="section-headline">Gifts</h2>
+      <p>The greatest gift for us is to have you there.</p>
+      <img src="https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-gifts.png" alt="gifts">
+      <p>Please, just bring yourself and have fun with us.</p>
+    </section>
+    <section class="questions-answers gold">
+      <h2 class="section-headline">Questions and Answers</h2>
+      <div class="qa">
+        <div>
+          <h3>Travel and accomodations</h3>
+          <p class="question">Will there be some kind of organized transfer?</p>
+          <p class="answer">No, we'll just meet at the church at 13:15.</p>
+          <p class="question">Where can I park?</p>
+          <p class="answer">Parking is free on the weekends in the 1st district. The locations are close to each other so you won't need your car.</p>
+          <p class="question">How can I get home at night?</p>
+          <p class="answer">The 916 bus is in service all night at the castle and it hits every major traffic hub in the city.</p>
+          <hr>
+        </div><!--
+        --><div>
+          <h3>Food and festivities</h3>
+          <p class="question">I'd like to do some kind of surprise for you guys at the party. To whom should I talk about this?</p>
+          <p class="answer">Discuss it with Abigail Smith. Just drop her an email at <a href="mailto:abigail@awesomemail.com">abigail@awesomemail.com</a>.</p>
+          <p class="question">What should I wear? Do you have a dress code?</p>
+          <p class="answer">Wear what's comfortable to you. If it helps <a href="https://www.thetrendspotter.net/smart-casual-dress-code-for-women/" target="_blank">smart casual</a> / <a href="https://stylishlyme.com/what-to-wear/business-casual-attire-for-women/" target="_blank">business casual</a> for the ladies and <a href="https://manofmany.com/fashion/mens-fashion-advice/guide-mens-smart-casual-dress-code" target="_blank">smart casual</a> / <a href="http://www.fashionbeans.com/2016/complete-guide-mens-dress-codes/" target="_blank">informal</a> for the gentlemen are perfect options.</p>
+          <p class="question">I would like some kind of special food (gluten-free, lactose-free, vegan etc.)</p>
+          <p class="answer">Drop us a line <a href="mailto:zoeandalex@awesomemail.com">here</a> and we'll find a way.</p>
+          <hr>
+        </div><!--
+        --><div>
+          <h3>Other small stuff</h3>
+          <p class="question">I have a problem / question on the wedding day. With whom can I speak?</p>
+          <p class="answer">Jared Wright on this number: <a href="tel:+36300000000">+36 30 000 0000</a>.</p>
+          <p class="question">Can we bring kids?</p>
+          <p class="answer">Sure! We planned a whole toy / sweets corner for them.</p>
+          <p class="question">How do you feel about dogs? Can I bring mine?</p>
+          <p class="answer">We love dogs and you can absolutely bring yours. The Heaven Lounge is a dog-friendly place.</p>
+          <hr>
+        </div>
+      </div>
+    </section>
+    <section class="contact grey">
+      <h2 class="section-headline">Contact</h2>
+      <p>If you have any questions feel free to call / write us.</p>
+      <p>Phone: <a href="tel:+36300000000">+36 30 000 0000</a> (Zoe) / <a href="tel:+36300000000">+36 30 000 0000</a> (Alex)</p>
+      <p>Email: <a href="mailto:zoeandalex@awesomemail.com">zoeandalex@awesomemail.com</a></p>
+    </section>
+  </main>
+  <footer class="gold">
+    <small>Made with <img src="https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-favicon.png" alt="love"> in Budapest ©2018 | Icons by <a href="https://www.flaticon.com/authors/becris" target="_blank">Becris</a> (<a href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC 3.0 BY</a>)</small>
+  </footer>
+</body>
+</html>
